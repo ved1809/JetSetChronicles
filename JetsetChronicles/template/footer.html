@@ -1,17 +1,19 @@
+
 <footer class="page-footer bg-cor">
           <div class="container">
             <div class="row">
               <div class="col l6 s12">
                 <h5 class="white-text">Jetset Chronicles</h5>
-                <p class="grey-text text-lighten-4">You can use rows and columns here to organize your footer content.</p>
+                <p class="grey-text text-lighten-4"><b>Team</b><br> Hemant Satam (56) <br> Subodh Thalkari (62)<br>  Ved Shirur (60)<br>  </p>
               </div>
               <div class="col l4 offset-l2 s12">
                 <h5 class="white-text">Links</h5>
                 <ul>
-                  <li><a class="grey-text text-lighten-3"  href="/">Home</a></li>
-                  <li><a class="grey-text text-lighten-3" href="#!">Jetset Insta page</a></li>
-                  <li><a class="grey-text text-lighten-3" href="#!">Jetset FB page</a></li>
-                  <li><a class="grey-text text-lighten-3" href="#!">Contact us</a></li>
+                  <li><a class="grey-text text-lighten-3"  href="http://127.0.0.1:8000/">Home</a></li>
+                    <li><a class="grey-text text-lighten-3"  ><b>Categories</b></a></li>
+                  {%for cat in cats%}
+                   <li><a class="grey-text text-lighten-3"  href="/category/{{cat.url}}">{{cat.title}}</a></li>
+                    {%endfor%}
                 </ul>
               </div>
             </div>
@@ -19,7 +21,7 @@
           <div class="footer-copyright">
             <div class="container">
             © 2024 Jetset Chronicles.Inc
-            <a class="grey-text text-lighten-4 right" href="#!">More Links</a>
+            <a class="grey-text text-lighten-4 right" href="#!"></a>
             </div>
           </div>
         </footer>

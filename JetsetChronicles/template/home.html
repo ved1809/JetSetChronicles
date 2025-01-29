@@ -3,8 +3,7 @@
 {%block title%} Welcome to Jetset Chronicles {%endblock%}
 
 {%block content%}
-<div class="container-custom">
-
+<div class="container-custom" style="">
 
 
 
@@ -15,7 +14,7 @@
 
     <div class="card item" style="margin-left:10px;">
         <div class="img-container">
-            <img src="/media/{{cat.image}}" class="responsive-img" alt="">
+            <img src="/media/{{cat.image}}" class="responsive-img " style="width:310px; height:200px;"  alt="">
         </div>
         <div class="card-content">
             <div class="card-title">
@@ -41,6 +40,8 @@
             {% for p in posts%}
             <div class="row">
                 <div class="col s12 m8">
+                    <h3 style="color: black ">{{p.title}}</h3>
+
             {{p.content|truncatewords:60|safe}}
              <div class="mar20">
                 <a href="/blog/{{p.url}}" class="btn bg-cor">Read More</a>

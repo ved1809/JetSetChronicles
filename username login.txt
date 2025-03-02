@@ -1,2 +1,2 @@
-username :ved
+username :veds
 password: Vedshirur18*

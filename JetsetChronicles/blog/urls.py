@@ -18,16 +18,20 @@ from django.contrib import admin
 from django.urls import path, include
 from django.conf.urls.static import static
 from django.conf import settings
-from .views import home,post,category,login_view
+from .views import home, post, category, register_view, login_view, logout_view, profile_view
+
 
 
 
 
 
 urlpatterns = [
-       path('',home),
-       path('blog/<slug:url>',post),
-       path('category/<slug:url>',category),
-       path('admin/logout/',login_view),
-
+    path('', home, name='home'),
+    path('blog/<slug:url>', post, name='post'),
+    path('category/<slug:url>', category, name='category'),
+    path('register/', register_view, name='register'),
+    path('login/', login_view, name='login'),
+    path('logout/', logout_view, name='logout'),
+    path('profile/', profile_view, name='profile'),
+    path('admin/logout/', login_view),
 ]

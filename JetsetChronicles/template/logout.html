@@ -1,10 +1,23 @@
-<form method="post" action="/admin/login/">
-    {% csrf_token %}
-    <label for="username">Username:</label>
-    <input type="text" id="username" name="username">
-    <br>
-    <label for="password">Password:</label>
-    <input type="password" id="password" name="password">
-    <br>
-    <button type="submit">Login</button>
-</form>
+{% extends 'base.html' %}
+
+{% block title %}Login{% endblock %}
+
+{% block content %}
+<div class="container-custom">
+    <h2>Login</h2>
+    <div class="form-container">
+        <form method="post" action="/admin/login/">
+            {% csrf_token %}
+            <div class="input-field">
+                <label for="username">Username:</label>
+                <input type="text" id="username" name="username" class="validate">
+            </div>
+            <div class="input-field">
+                <label for="password">Password:</label>
+                <input type="password" id="password" name="password" class="validate">
+            </div>
+            <button type="submit" class="btn bg-cor">Login</button>
+        </form>
+    </div>
+</div>
+{% endblock %}

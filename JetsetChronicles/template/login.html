@@ -1,0 +1,29 @@
+{% extends 'base.html' %}
+
+{% block title %} Welcome to Jetset Chronicles {% endblock %}
+
+{% block content %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login </title>
+    <style>
+        form {
+            margin-left: 50px; /* Adjust this value as needed */
+        }
+    </style>
+</head>
+<body>
+    
+    <h2>Login </h2>
+    <form method="post">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit">Login</button>
+    </form>
+    
+</body>
+</html>
+{% endblock content %}

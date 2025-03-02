@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+
+{% block title %}Profile{% endblock %}
+
+{% block content %}
+<div class="container-custom">
+    <h2>Profile</h2>
+    <div class="profile-info">
+        <p><strong>Username:</strong> {{ user.username }}</p>
+        <p><strong>Email:</strong> {{ user.email }}</p>
+    </div>
+    <h3>Your Posts</h3>
+    <div class="collection">
+        {% for post in posts %}
+            <a href="{% url 'post' post.url %}" class="collection-item">{{ post.title }}</a>
+        {% empty %}
+            <p>You have no posts yet.</p>
+        {% endfor %}
+    </div>
+</div>
+{% endblock %}

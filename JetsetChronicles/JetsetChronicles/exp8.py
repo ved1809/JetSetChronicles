@@ -51,4 +51,3 @@ move_planets()
 
 # Keep the window open
 wn.mainloop()
-`

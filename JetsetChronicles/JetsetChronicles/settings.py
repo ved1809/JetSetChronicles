@@ -76,10 +76,15 @@ WSGI_APPLICATION = 'JetsetChronicles.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'jetset_database',  # Replace with your database name
+        'USER': 'postgres',  # Replace with your database user
+        'PASSWORD': 'Vedshirur18*',  # Replace with your database password
+        'HOST': 'localhost',  # Set to empty string for localhost
+        'PORT': '5432',  # Default PostgreSQL port
     }
 }
+
 
 # Password validation
 # https://docs.djangoproject.com/en/5.0/ref/settings/#auth-password-validators
